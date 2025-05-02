@@ -9,11 +9,11 @@ const Footer = () => {
         <div>
           <img className="mb-5 w-40" src={assets.logo} alt="" />
           <p className="w-full md:w-2/3 text-gray-600 leading-6">
-            HealthPlus is your trusted partner in healthcare, connecting you
+            Prescripto is your trusted partner in healthcare, connecting you
             with top doctors and specialists. Our mission is to make healthcare
             accessible, reliable, and convenient for everyone. Book
             appointments, access medical resources, and stay informed with
-            HealthPlus.
+            Prescripto.
           </p>
         </div>
 
