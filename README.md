@@ -1,5 +1,5 @@
-# Prescripto
-Prescripto is a modern healthcare platform designed to connect users with top doctors and specialists. It aims to make healthcare accessible, reliable, and convenient for everyone. Users can browse doctors by specialty, book appointments, and access essential healthcare resources.
+# HealthPlus
+HealthPlus is a modern healthcare platform designed to connect users with top doctors and specialists. It aims to make healthcare accessible, reliable, and convenient for everyone. Users can browse doctors by specialty, book appointments, and access essential healthcare resources.
 
 ## Features -
 Doctor Directory: Browse through a list of trusted doctors and specialists.
