@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { assets } from "../assets/assets";
+import RelatedDoctors from "../components/RelatedDoctors";
 
 const Appointments = () => {
   const { docId } = useParams();
@@ -132,10 +133,11 @@ const Appointments = () => {
             {docSlots?.length > 0 &&
               docSlots.map((item, index) => (
                 <div
-                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer border-2 ${
+                  onClick={() => setSlotIndex(index)}
+                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
                     slotIndex === index
-                      ? "bg-primary text-white"
-                      : "border border-gray-200"
+                      ? "bg-primary text-white border-gray-300"
+                      : "border border-gray-400"
                   } `}
                   key={index}
                 >
@@ -144,7 +146,29 @@ const Appointments = () => {
                 </div>
               ))}
           </div>
+
+          <div className="flex items-center gap-3 w-full overflow-x-scroll mt-5">
+            {docSlots.length &&
+              docSlots[slotIndex].map((item, index) => (
+                <p
+                  onClick={() => setSlotTime(item.time)}
+                  className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${
+                    item.time === slotTime
+                      ? "bg-primary text-white border-gray-400"
+                      : "text-gray-900 border border-gray-400"
+                  }`}
+                >
+                  {item.time.toLowerCase()}
+                </p>
+              ))}
+          </div>
+          <button className="bg-primary text-white text-sm font-light px-14 py-3 rounded-full mt-7 hover:bg-primary/80 transition-all duration-300">
+            Book an Appointment
+          </button>
         </div>
+
+        {/* ------ Related Doctors ------ */}
+        <RelatedDoctors docId={docId} speciality={docInfo.speciality} />
       </div>
     )
   );
