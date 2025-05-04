@@ -116,9 +116,10 @@ const Appointments = () => {
               </p>
             </div>
             <p className="text-gray-500 font-medium mt-4">
-              Appointment fee:
+              Appointment fee:{" "}
               <span className="text-gray-600">
-                {currencySymbol} {docInfo.fees}
+                {currencySymbol}
+                {docInfo.fees}
               </span>
             </p>
           </div>
@@ -131,7 +132,7 @@ const Appointments = () => {
             {docSlots?.length > 0 &&
               docSlots.map((item, index) => (
                 <div
-                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
+                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer border-2 ${
                     slotIndex === index
                       ? "bg-primary text-white"
                       : "border border-gray-200"

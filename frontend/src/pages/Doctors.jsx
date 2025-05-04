@@ -27,7 +27,7 @@ const Doctors = () => {
         <div className="flex flex-col gap-4 text-sm text-gray-600">
           <p
             onClick={() =>
-              speciality === " General physician"
+              speciality === "General physician"
                 ? navigate("/doctors")
                 : navigate("/doctors/General physician")
             }
@@ -41,7 +41,7 @@ const Doctors = () => {
           </p>
           <p
             onClick={() =>
-              speciality === "   Gynecologist "
+              speciality === "Gynecologist"
                 ? navigate("/doctors")
                 : navigate("/doctors/Gynecologist")
             }
